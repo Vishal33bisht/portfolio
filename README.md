@@ -4,7 +4,7 @@ This is my personal portfolio website built to showcase my skills, projects, and
 
 ## 🚀 Live Demo
 🔗 [View Portfolio](#)  
-[*(Add your deployed link here)*](https://portfolio-gamma-mauve-4u2p6261h5.vercel.app/)
+(https://portfolio-gamma-mauve-4u2p6261h5.vercel.app/)
 
 ---
 
