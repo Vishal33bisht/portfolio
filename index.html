@@ -237,6 +237,8 @@
     transition: border-color 0.2s, transform 0.2s;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
   .project-card::before {
     content: '';
@@ -258,6 +260,7 @@
   .project-bullets {
     list-style: none;
     margin-bottom: 1.25rem;
+    flex: 1;
   }
   .project-bullets li {
     font-size: 12px;
@@ -286,6 +289,13 @@
     border-radius: 4px;
     letter-spacing: 0.04em;
   }
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: auto;
+  }
   .project-link {
     font-family: var(--mono);
     font-size: 11px;
@@ -296,6 +306,18 @@
     transition: color 0.2s;
   }
   .project-link:hover { color: #fff; }
+  .project-link.demo {
+    color: var(--accent2);
+    background: rgba(167,139,250,0.1);
+    border: 1px solid rgba(167,139,250,0.2);
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .project-link.demo:hover {
+    background: rgba(167,139,250,0.2);
+    color: #fff;
+  }
 
   /* SKILLS */
   .skills-grid {
@@ -491,7 +513,7 @@
     </div>
     <div class="stat-grid">
       <div class="stat-card">
-        <div class="stat-num">4+</div>
+        <div class="stat-num">8+</div>
         <div class="stat-label">Projects Built</div>
       </div>
       <div class="stat-card">
@@ -518,6 +540,7 @@
   <h2 class="section-title fade-in">Selected Projects</h2>
   <div class="projects-grid fade-in">
 
+    <!-- AI Trip Planner -->
     <div class="project-card">
       <div class="project-icon">🗺️</div>
       <div class="project-name">AI Trip Planner</div>
@@ -531,9 +554,13 @@
         <span class="tech-tag">Node.js</span>
         <span class="tech-tag">AI APIs</span>
       </div>
-      <a href="https://github.com/Vishal33bisht/Ai_trip-planner" class="project-link" target="_blank">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://ai-trip-planner-seven-inky.vercel.app/" class="project-link demo" target="_blank">⚡ Live Demo</a>
+        <a href="https://github.com/Vishal33bisht/Ai_trip-planner" class="project-link" target="_blank">GitHub →</a>
+      </div>
     </div>
 
+    <!-- Road Rescue -->
     <div class="project-card">
       <div class="project-icon">🚗</div>
       <div class="project-name">Road Rescue</div>
@@ -548,9 +575,13 @@
         <span class="tech-tag">React</span>
         <span class="tech-tag">Node.js</span>
       </div>
-      <a href="https://github.com/Vishal33bisht/Road_resque" class="project-link" target="_blank">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://road-resque.vercel.app/driver-dashboard" class="project-link demo" target="_blank">⚡ Live Demo</a>
+        <a href="https://github.com/Vishal33bisht/Road_resque" class="project-link" target="_blank">GitHub →</a>
+      </div>
     </div>
 
+    <!-- Kingsukh Guesthouse -->
     <div class="project-card">
       <div class="project-icon">🏨</div>
       <div class="project-name">Kingsukh Guesthouse Redesign</div>
@@ -564,9 +595,13 @@
         <span class="tech-tag">CSS</span>
         <span class="tech-tag">JavaScript</span>
       </div>
-      <a href="https://github.com/Vishal33bisht/kingsukh-guesthouse-redesign" class="project-link" target="_blank">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://kingsukh-gesthouse-redesign.vercel.app/" class="project-link demo" target="_blank">⚡ Live Demo</a>
+        <a href="https://github.com/Vishal33bisht/kingsukh-guesthouse-redesign" class="project-link" target="_blank">GitHub →</a>
+      </div>
     </div>
 
+    <!-- BookMyTicket -->
     <div class="project-card">
       <div class="project-icon">🎟️</div>
       <div class="project-name">BookMyTicket</div>
@@ -579,7 +614,88 @@
         <span class="tech-tag">JavaScript</span>
         <span class="tech-tag">Full Stack</span>
       </div>
-      <a href="https://github.com/Vishal33bisht/BookMyTicket" class="project-link" target="_blank">View on GitHub →</a>
+      <div class="project-links">
+        <a href="https://github.com/Vishal33bisht/BookMyTicket" class="project-link" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- 1 Million Checkbox -->
+    <div class="project-card">
+      <div class="project-icon">☑️</div>
+      <div class="project-name">1 Million Checkbox</div>
+      <ul class="project-bullets">
+        <li>Rendered and managed one million interactive checkboxes in the browser</li>
+        <li>Implemented virtualization techniques for smooth scrolling and performance</li>
+        <li>Explored browser limits for DOM rendering and state management at scale</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Canvas/DOM</span>
+        <span class="tech-tag">Performance</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Vishal33bisht/1-million-checkbox" class="project-link" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- Live Location Tracker -->
+    <div class="project-card">
+      <div class="project-icon">📍</div>
+      <div class="project-name">Live Location Tracker</div>
+      <ul class="project-bullets">
+        <li>Built a real-time location tracking system using WebSockets</li>
+        <li>Integrated map APIs to display live position updates on an interactive map</li>
+        <li>Designed for low-latency communication between connected clients</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Socket.io</span>
+        <span class="tech-tag">Maps API</span>
+        <span class="tech-tag">Express</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Vishal33bisht/live-location-tracker" class="project-link" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- Job Matcher -->
+    <div class="project-card">
+      <div class="project-icon">💼</div>
+      <div class="project-name">Job Matcher</div>
+      <ul class="project-bullets">
+        <li>Created an intelligent job matching engine that aligns candidate profiles with listings</li>
+        <li>Built skill-based filtering and scoring logic for relevant recommendations</li>
+        <li>Designed a clean dashboard UI for seamless job discovery</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Express</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Vishal33bisht/job-matcher" class="project-link" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <!-- AI Stress Predictor -->
+    <div class="project-card">
+      <div class="project-icon">🧠</div>
+      <div class="project-name">AI Stress Predictor</div>
+      <ul class="project-bullets">
+        <li>Developed an AI model to predict stress levels based on user-provided inputs</li>
+        <li>Integrated a machine learning backend with a user-friendly web interface</li>
+        <li>Applied data preprocessing and model training for accurate predictions</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">ML</span>
+        <span class="tech-tag">React</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Vishal33bisht/AI-stress_predictor" class="project-link" target="_blank">GitHub →</a>
+      </div>
     </div>
 
   </div>
@@ -597,6 +713,7 @@
       <div class="skill-tags">
         <span class="skill-tag">C++</span>
         <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
       </div>
     </div>
     <div class="skill-group">
@@ -615,6 +732,7 @@
         <span class="skill-tag">Node.js</span>
         <span class="skill-tag">Express</span>
         <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Socket.io</span>
       </div>
     </div>
     <div class="skill-group">
@@ -631,13 +749,16 @@
         <span class="skill-tag">Git</span>
         <span class="skill-tag">Docker</span>
         <span class="skill-tag">Postman</span>
+        <span class="skill-tag">Vercel</span>
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-label">Platforms</div>
+      <div class="skill-group-label">Platforms & APIs</div>
       <div class="skill-tags">
         <span class="skill-tag">Oracle Cloud</span>
         <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">Maps API</span>
+        <span class="skill-tag">AI APIs</span>
       </div>
     </div>
   </div>
