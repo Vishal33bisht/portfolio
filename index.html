@@ -390,6 +390,24 @@
     border-radius: 8px;
     padding: 0.9rem 1.25rem;
     margin-top: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+   .cert-card:hover {
+    border-color: rgba(108,99,255,0.4);
+    transform: translateY(-2px);
+  }
+  .cert-arrow {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent3);
+    margin-left: 0.5rem;
+    transition: transform 0.2s;
+  }
+  .cert-card:hover .cert-arrow {
+    transform: translate(2px, -2px);
   }
   .cert-badge {
     width: 36px; height: 36px;
@@ -778,13 +796,16 @@
       </div>
       <div class="edu-year">2022 – 2026</div>
     </div>
-    <div class="cert-card">
-      <div class="cert-badge">☁️</div>
-      <div>
-        <div class="cert-name">Oracle Cloud Infrastructure (OCI)</div>
-        <div class="cert-issuer">Oracle · Certified</div>
-      </div>
-    </div>
+<a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=96D2F3B9B26990193335E4D7B4CDB9927A147F86832B72141028EEE45F7A7353" 
+   target="_blank" 
+   class="cert-card">
+  <div class="cert-badge">☁️</div>
+  <div>
+    <div class="cert-name">Oracle Cloud Infrastructure (OCI)</div>
+    <div class="cert-issuer">Oracle · Certified</div>
+  </div>
+  <div class="cert-arrow">↗</div>
+</a>
   </div>
 </section>
 
